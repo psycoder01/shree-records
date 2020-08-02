@@ -9,6 +9,8 @@ A cross platform GUI app created using Qt-Designer and Python
 
 > pip install xlrd
 
+> pip install openpyxl
+
 2 . Copy all the file to the environment folder
 
 
