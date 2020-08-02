@@ -1,6 +1,7 @@
 from main import *
 from functions.home import showData
 
+
 class UIFunctions(MainWindow):
 
     def toggleMenu(self, maxWidth, enable):

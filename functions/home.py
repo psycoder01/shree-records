@@ -4,7 +4,7 @@ from PySide2.QtGui import QFont
 
 
 def showData(self):
-   dataFrame = pd.read_excel('store/data.xlsx', 0)
+   dataFrame = pd.read_excel('store/data.xlsx',0)
    rowLength = len(dataFrame.index)
    # Setting max row count in table
    self.ui.table_pageHome.setRowCount(rowLength+1)

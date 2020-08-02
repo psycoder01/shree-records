@@ -11,6 +11,8 @@ from ui_main import Ui_MainWindow
 # IMPORT FUNCTIONS
 from ui_functions import *
 from functions.home import showData
+from functions.imports import addImports
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -34,9 +36,10 @@ class MainWindow(QMainWindow):
         self.ui.Btn_Menu_Products.clicked.connect(
             lambda: UIFunctions.changeStackPage(self, self.ui.page_Products, 5))
 
-        ## Functoins
-        showData(self) 
-
+        ## Home Function
+        showData(self)
+        ## Import Functions
+        self.ui.btnImports.clicked.connect(lambda: addImports(self))
         self.show()
 
 
