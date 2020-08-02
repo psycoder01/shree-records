@@ -11,7 +11,8 @@ from ui_main import Ui_MainWindow
 # IMPORT FUNCTIONS
 from ui_functions import *
 from functions.home import showData
-from functions.imports import addImports
+from functions.imports import addImports,clearInputsImports
+from functions.exports import addExports,clearInputsExports
 
 
 class MainWindow(QMainWindow):
@@ -40,6 +41,10 @@ class MainWindow(QMainWindow):
         showData(self)
         ## Import Functions
         self.ui.btnImports.clicked.connect(lambda: addImports(self))
+        self.ui.btnResetImports.clicked.connect(lambda:clearInputsImports(self))
+        self.ui.btnExports.clicked.connect(lambda:addExports(self))
+        self.ui.btnResetExports.clicked.connect(lambda:clearInputsExports(self))
+
         self.show()
 
 

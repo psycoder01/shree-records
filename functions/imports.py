@@ -23,3 +23,11 @@ def addImports(self):
             continue
         cell.value = data[col-2]
     wb.save('store/data.xlsx')
+
+    clearInputsImports(self)
+
+def clearInputsImports(self):
+    self.ui.inputNameImports.setText("")
+    self.ui.inputProductImports.setText("")
+    self.ui.inputTotalImports.setText("")
+    self.ui.inputPnoImports.setText("")
