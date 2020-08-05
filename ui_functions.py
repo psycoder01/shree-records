@@ -1,6 +1,6 @@
 from main import *
 from functions.home import showData
-
+from functions.search import setDate
 
 class UIFunctions(MainWindow):
 
@@ -38,6 +38,7 @@ class UIFunctions(MainWindow):
             self.ui.Btn_Menu_Exports.setChecked(True)
         if(index == 4):
             self.ui.Btn_Menu_Search.setChecked(True)
+            setDate(self)
         if(index == 5):
             self.ui.Btn_Menu_Products.setChecked(True)
 

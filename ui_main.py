@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledqtDzwl.ui'
+## Form generated from reading UI file 'untitledfCIwRW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.0
 ##
@@ -273,55 +273,55 @@ class Ui_MainWindow(object):
         self.frame_pageImports.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame_pageImports)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.labelTotalImports = QLabel(self.frame_pageImports)
+        self.labelTotalImports.setObjectName(u"labelTotalImports")
+
+        self.gridLayout.addWidget(self.labelTotalImports, 3, 0, 1, 1)
+
+        self.btnImports = QPushButton(self.frame_pageImports)
+        self.btnImports.setObjectName(u"btnImports")
+
+        self.gridLayout.addWidget(self.btnImports, 6, 2, 1, 1)
+
+        self.labelPnoImports = QLabel(self.frame_pageImports)
+        self.labelPnoImports.setObjectName(u"labelPnoImports")
+
+        self.gridLayout.addWidget(self.labelPnoImports, 4, 0, 1, 1)
+
         self.labelProductImports = QLabel(self.frame_pageImports)
         self.labelProductImports.setObjectName(u"labelProductImports")
 
         self.gridLayout.addWidget(self.labelProductImports, 1, 0, 1, 1)
 
-        self.inputProductImports = QLineEdit(self.frame_pageImports)
-        self.inputProductImports.setObjectName(u"inputProductImports")
+        self.btnResetImports = QPushButton(self.frame_pageImports)
+        self.btnResetImports.setObjectName(u"btnResetImports")
 
-        self.gridLayout.addWidget(self.inputProductImports, 1, 2, 1, 1)
+        self.gridLayout.addWidget(self.btnResetImports, 6, 1, 1, 1)
 
         self.labelNameImports = QLabel(self.frame_pageImports)
         self.labelNameImports.setObjectName(u"labelNameImports")
 
         self.gridLayout.addWidget(self.labelNameImports, 0, 0, 1, 1)
 
-        self.labelPnoImports = QLabel(self.frame_pageImports)
-        self.labelPnoImports.setObjectName(u"labelPnoImports")
-
-        self.gridLayout.addWidget(self.labelPnoImports, 3, 0, 1, 1)
-
-        self.inputTotalImports = QLineEdit(self.frame_pageImports)
-        self.inputTotalImports.setObjectName(u"inputTotalImports")
-
-        self.gridLayout.addWidget(self.inputTotalImports, 2, 2, 1, 1)
-
         self.inputNameImports = QLineEdit(self.frame_pageImports)
         self.inputNameImports.setObjectName(u"inputNameImports")
 
         self.gridLayout.addWidget(self.inputNameImports, 0, 2, 1, 1)
 
+        self.inputProductImports = QLineEdit(self.frame_pageImports)
+        self.inputProductImports.setObjectName(u"inputProductImports")
+
+        self.gridLayout.addWidget(self.inputProductImports, 1, 2, 1, 1)
+
+        self.inputTotalImports = QLineEdit(self.frame_pageImports)
+        self.inputTotalImports.setObjectName(u"inputTotalImports")
+
+        self.gridLayout.addWidget(self.inputTotalImports, 3, 2, 1, 1)
+
         self.inputPnoImports = QLineEdit(self.frame_pageImports)
         self.inputPnoImports.setObjectName(u"inputPnoImports")
 
-        self.gridLayout.addWidget(self.inputPnoImports, 3, 2, 1, 1)
-
-        self.labelTotalImports = QLabel(self.frame_pageImports)
-        self.labelTotalImports.setObjectName(u"labelTotalImports")
-
-        self.gridLayout.addWidget(self.labelTotalImports, 2, 0, 1, 1)
-
-        self.btnResetImports = QPushButton(self.frame_pageImports)
-        self.btnResetImports.setObjectName(u"btnResetImports")
-
-        self.gridLayout.addWidget(self.btnResetImports, 4, 1, 1, 1)
-
-        self.btnImports = QPushButton(self.frame_pageImports)
-        self.btnImports.setObjectName(u"btnImports")
-
-        self.gridLayout.addWidget(self.btnImports, 4, 2, 1, 1)
+        self.gridLayout.addWidget(self.inputPnoImports, 4, 2, 1, 1)
 
 
         self.verticalLayout_8.addWidget(self.frame_pageImports)
@@ -401,55 +401,62 @@ class Ui_MainWindow(object):
         self.frame_pageSearch.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frame_pageSearch)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.inputDate = QDateEdit(self.frame_pageSearch)
-        self.inputDate.setObjectName(u"inputDate")
+        self.inputNameSearch = QLineEdit(self.frame_pageSearch)
+        self.inputNameSearch.setObjectName(u"inputNameSearch")
 
-        self.gridLayout_3.addWidget(self.inputDate, 1, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.inputNameSearch, 1, 3, 1, 1)
+
+        self.btnSearch = QPushButton(self.frame_pageSearch)
+        self.btnSearch.setObjectName(u"btnSearch")
+
+        self.gridLayout_3.addWidget(self.btnSearch, 3, 3, 1, 1)
+
+        self.optionsSearch = QComboBox(self.frame_pageSearch)
+        self.optionsSearch.addItem("")
+        self.optionsSearch.addItem("")
+        self.optionsSearch.setObjectName(u"optionsSearch")
+
+        self.gridLayout_3.addWidget(self.optionsSearch, 3, 0, 1, 1)
 
         self.inputProductSearch = QLineEdit(self.frame_pageSearch)
         self.inputProductSearch.setObjectName(u"inputProductSearch")
 
         self.gridLayout_3.addWidget(self.inputProductSearch, 1, 1, 1, 2)
 
-        self.tabelResultSearch = QTableView(self.frame_pageSearch)
-        self.tabelResultSearch.setObjectName(u"tabelResultSearch")
-
-        self.gridLayout_3.addWidget(self.tabelResultSearch, 4, 0, 1, 5)
-
         self.labelDateSearch = QLabel(self.frame_pageSearch)
         self.labelDateSearch.setObjectName(u"labelDateSearch")
 
         self.gridLayout_3.addWidget(self.labelDateSearch, 0, 0, 1, 1)
-
-        self.labelNameSearch = QLabel(self.frame_pageSearch)
-        self.labelNameSearch.setObjectName(u"labelNameSearch")
-
-        self.gridLayout_3.addWidget(self.labelNameSearch, 0, 4, 1, 1)
-
-        self.inputNameSearch = QLineEdit(self.frame_pageSearch)
-        self.inputNameSearch.setObjectName(u"inputNameSearch")
-
-        self.gridLayout_3.addWidget(self.inputNameSearch, 1, 4, 1, 1)
-
-        self.btnSearch = QPushButton(self.frame_pageSearch)
-        self.btnSearch.setObjectName(u"btnSearch")
-
-        self.gridLayout_3.addWidget(self.btnSearch, 3, 4, 1, 1)
 
         self.btnRessetSearch = QPushButton(self.frame_pageSearch)
         self.btnRessetSearch.setObjectName(u"btnRessetSearch")
 
         self.gridLayout_3.addWidget(self.btnRessetSearch, 3, 2, 1, 1)
 
+        self.labelNameSearch = QLabel(self.frame_pageSearch)
+        self.labelNameSearch.setObjectName(u"labelNameSearch")
+
+        self.gridLayout_3.addWidget(self.labelNameSearch, 0, 3, 1, 1)
+
         self.btnDelSearch = QPushButton(self.frame_pageSearch)
         self.btnDelSearch.setObjectName(u"btnDelSearch")
 
         self.gridLayout_3.addWidget(self.btnDelSearch, 3, 1, 1, 1)
 
+        self.inputDate = QDateEdit(self.frame_pageSearch)
+        self.inputDate.setObjectName(u"inputDate")
+
+        self.gridLayout_3.addWidget(self.inputDate, 1, 0, 1, 1)
+
         self.labelProductSearch = QLabel(self.frame_pageSearch)
         self.labelProductSearch.setObjectName(u"labelProductSearch")
 
         self.gridLayout_3.addWidget(self.labelProductSearch, 0, 1, 1, 2)
+
+        self.tableResultSearch = QTableWidget(self.frame_pageSearch)
+        self.tableResultSearch.setObjectName(u"tableResultSearch")
+
+        self.gridLayout_3.addWidget(self.tableResultSearch, 4, 0, 1, 4)
 
 
         self.verticalLayout_9.addWidget(self.frame_pageSearch)
@@ -572,22 +579,25 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Rate", None));
         ___qtablewidgetitem2 = self.table_pageHome.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Available", None));
-        self.labelProductImports.setText(QCoreApplication.translate("MainWindow", u"Product", None))
-        self.labelNameImports.setText(QCoreApplication.translate("MainWindow", u"Name", None))
-        self.labelPnoImports.setText(QCoreApplication.translate("MainWindow", u"Phone No", None))
         self.labelTotalImports.setText(QCoreApplication.translate("MainWindow", u"Total", None))
-        self.btnResetImports.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
         self.btnImports.setText(QCoreApplication.translate("MainWindow", u"Import", None))
+        self.labelPnoImports.setText(QCoreApplication.translate("MainWindow", u"Phone No", None))
+        self.labelProductImports.setText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.btnResetImports.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
+        self.labelNameImports.setText(QCoreApplication.translate("MainWindow", u"Name", None))
         self.labelNameExports.setText(QCoreApplication.translate("MainWindow", u"Name", None))
         self.labelProductExports.setText(QCoreApplication.translate("MainWindow", u"Product", None))
         self.labelTotalExports.setText(QCoreApplication.translate("MainWindow", u"Total", None))
         self.labelPnoExports.setText(QCoreApplication.translate("MainWindow", u"Phone No", None))
         self.btnResetExports.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
         self.btnExports.setText(QCoreApplication.translate("MainWindow", u"Export", None))
-        self.labelDateSearch.setText(QCoreApplication.translate("MainWindow", u"Date", None))
-        self.labelNameSearch.setText(QCoreApplication.translate("MainWindow", u"Name", None))
         self.btnSearch.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.optionsSearch.setItemText(0, QCoreApplication.translate("MainWindow", u"Imports", None))
+        self.optionsSearch.setItemText(1, QCoreApplication.translate("MainWindow", u"Exports", None))
+
+        self.labelDateSearch.setText(QCoreApplication.translate("MainWindow", u"Date", None))
         self.btnRessetSearch.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
+        self.labelNameSearch.setText(QCoreApplication.translate("MainWindow", u"Name", None))
         self.btnDelSearch.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
         self.labelProductSearch.setText(QCoreApplication.translate("MainWindow", u"Product", None))
         self.labelProductProducts.setText(QCoreApplication.translate("MainWindow", u"Product", None))

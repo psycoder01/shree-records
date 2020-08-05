@@ -520,6 +520,27 @@ QPushButton:checked{
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout">
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="labelTotalImports">
+                   <property name="text">
+                    <string>Total</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="2">
+                  <widget class="QPushButton" name="btnImports">
+                   <property name="text">
+                    <string>Import</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="labelPnoImports">
+                   <property name="text">
+                    <string>Phone No</string>
+                   </property>
+                  </widget>
+                 </item>
                  <item row="1" column="0">
                   <widget class="QLabel" name="labelProductImports">
                    <property name="text">
@@ -527,8 +548,12 @@ QPushButton:checked{
                    </property>
                   </widget>
                  </item>
-                 <item row="1" column="2">
-                  <widget class="QLineEdit" name="inputProductImports"/>
+                 <item row="6" column="1">
+                  <widget class="QPushButton" name="btnResetImports">
+                   <property name="text">
+                    <string>Reset</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="0" column="0">
                   <widget class="QLabel" name="labelNameImports">
@@ -537,42 +562,17 @@ QPushButton:checked{
                    </property>
                   </widget>
                  </item>
-                 <item row="3" column="0">
-                  <widget class="QLabel" name="labelPnoImports">
-                   <property name="text">
-                    <string>Phone No</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="2">
-                  <widget class="QLineEdit" name="inputTotalImports"/>
-                 </item>
                  <item row="0" column="2">
                   <widget class="QLineEdit" name="inputNameImports"/>
                  </item>
+                 <item row="1" column="2">
+                  <widget class="QLineEdit" name="inputProductImports"/>
+                 </item>
                  <item row="3" column="2">
-                  <widget class="QLineEdit" name="inputPnoImports"/>
-                 </item>
-                 <item row="2" column="0">
-                  <widget class="QLabel" name="labelTotalImports">
-                   <property name="text">
-                    <string>Total</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="1">
-                  <widget class="QPushButton" name="btnResetImports">
-                   <property name="text">
-                    <string>Reset</string>
-                   </property>
-                  </widget>
+                  <widget class="QLineEdit" name="inputTotalImports"/>
                  </item>
                  <item row="4" column="2">
-                  <widget class="QPushButton" name="btnImports">
-                   <property name="text">
-                    <string>Import</string>
-                   </property>
-                  </widget>
+                  <widget class="QLineEdit" name="inputPnoImports"/>
                  </item>
                 </layout>
                </widget>
@@ -660,36 +660,37 @@ QPushButton:checked{
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_3">
-                 <item row="1" column="0">
-                  <widget class="QDateEdit" name="inputDate"/>
+                 <item row="1" column="3">
+                  <widget class="QLineEdit" name="inputNameSearch"/>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QPushButton" name="btnSearch">
+                   <property name="text">
+                    <string>Search</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QComboBox" name="optionsSearch">
+                   <item>
+                    <property name="text">
+                     <string>Imports</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Exports</string>
+                    </property>
+                   </item>
+                  </widget>
                  </item>
                  <item row="1" column="1" colspan="2">
                   <widget class="QLineEdit" name="inputProductSearch"/>
-                 </item>
-                 <item row="4" column="0" colspan="5">
-                  <widget class="QTableView" name="tabelResultSearch"/>
                  </item>
                  <item row="0" column="0">
                   <widget class="QLabel" name="labelDateSearch">
                    <property name="text">
                     <string>Date</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="4">
-                  <widget class="QLabel" name="labelNameSearch">
-                   <property name="text">
-                    <string>Name</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="4">
-                  <widget class="QLineEdit" name="inputNameSearch"/>
-                 </item>
-                 <item row="3" column="4">
-                  <widget class="QPushButton" name="btnSearch">
-                   <property name="text">
-                    <string>Search</string>
                    </property>
                   </widget>
                  </item>
@@ -700,6 +701,13 @@ QPushButton:checked{
                    </property>
                   </widget>
                  </item>
+                 <item row="0" column="3">
+                  <widget class="QLabel" name="labelNameSearch">
+                   <property name="text">
+                    <string>Name</string>
+                   </property>
+                  </widget>
+                 </item>
                  <item row="3" column="1">
                   <widget class="QPushButton" name="btnDelSearch">
                    <property name="text">
@@ -707,12 +715,18 @@ QPushButton:checked{
                    </property>
                   </widget>
                  </item>
+                 <item row="1" column="0">
+                  <widget class="QDateEdit" name="inputDate"/>
+                 </item>
                  <item row="0" column="1" colspan="2">
                   <widget class="QLabel" name="labelProductSearch">
                    <property name="text">
                     <string>Product</string>
                    </property>
                   </widget>
+                 </item>
+                 <item row="4" column="0" colspan="4">
+                  <widget class="QTableWidget" name="tableResultSearch"/>
                  </item>
                 </layout>
                </widget>

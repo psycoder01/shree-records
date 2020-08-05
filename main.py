@@ -13,7 +13,7 @@ from ui_functions import *
 from functions.home import showData
 from functions.imports import addImports,clearInputsImports
 from functions.exports import addExports,clearInputsExports
-
+from functions.search import search,clearInputs,deleteRow
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -42,9 +42,13 @@ class MainWindow(QMainWindow):
         ## Import Functions
         self.ui.btnImports.clicked.connect(lambda: addImports(self))
         self.ui.btnResetImports.clicked.connect(lambda:clearInputsImports(self))
+        ## Export Functions
         self.ui.btnExports.clicked.connect(lambda:addExports(self))
         self.ui.btnResetExports.clicked.connect(lambda:clearInputsExports(self))
-
+        ## Search Functions
+        self.ui.btnSearch.clicked.connect(lambda:search(self))
+        self.ui.btnRessetSearch.clicked.connect(lambda:clearInputs(self))
+        self.ui.btnDelSearch.clicked.connect(lambda:deleteRow(self))
         self.show()
 
 
