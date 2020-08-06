@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledfCIwRW.ui'
+## Form generated from reading UI file 'untitledXOoSMk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.0
 ##
@@ -445,6 +445,8 @@ class Ui_MainWindow(object):
 
         self.inputDate = QDateEdit(self.frame_pageSearch)
         self.inputDate.setObjectName(u"inputDate")
+        self.inputDate.setCurrentSection(QDateTimeEdit.YearSection)
+        self.inputDate.setCalendarPopup(True)
 
         self.gridLayout_3.addWidget(self.inputDate, 1, 0, 1, 1)
 
@@ -599,6 +601,7 @@ class Ui_MainWindow(object):
         self.btnRessetSearch.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
         self.labelNameSearch.setText(QCoreApplication.translate("MainWindow", u"Name", None))
         self.btnDelSearch.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        self.inputDate.setDisplayFormat(QCoreApplication.translate("MainWindow", u"yyyy-MM-dd", None))
         self.labelProductSearch.setText(QCoreApplication.translate("MainWindow", u"Product", None))
         self.labelProductProducts.setText(QCoreApplication.translate("MainWindow", u"Product", None))
         self.labelPriceProducts.setText(QCoreApplication.translate("MainWindow", u"Price", None))

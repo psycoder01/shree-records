@@ -1,4 +1,5 @@
 from openpyxl import load_workbook
+from datetime import datetime
 
 
 def addExports(self):
@@ -12,11 +13,12 @@ def addExports(self):
     data.append(product)
     data.append(int(total))
     data.append(int(pno))
+    data.append(datetime.today().strftime('%Y-%m-%d;%H-%M'))
 
     wb = load_workbook('store/data.xlsx')
     ws = wb.get_sheet_by_name('exports')
     rowLen = len(ws['A'])
-    for col in range(1, 6):
+    for col in range(1, 7):
         cell = ws.cell(row=rowLen+1, column=col)
         if(col == 1):
             cell.value = rowLen
