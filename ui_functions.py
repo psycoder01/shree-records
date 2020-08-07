@@ -1,6 +1,7 @@
 from main import *
 from functions.home import showData
 from functions.search import setDate
+from functions.products import showDataProducts
 
 class UIFunctions(MainWindow):
 
@@ -40,6 +41,7 @@ class UIFunctions(MainWindow):
             self.ui.Btn_Menu_Search.setChecked(True)
             setDate(self)
         if(index == 5):
+            showDataProducts(self)
             self.ui.Btn_Menu_Products.setChecked(True)
 
         self.ui.stack_pages.setCurrentWidget(page)

@@ -13,15 +13,17 @@ def setDate(self):
 def clearInputs(self):
     self.ui.inputProductSearch.setText("")
     self.ui.inputNameSearch.setText("")
-    setDate(self)
-
+    date = QDate(2020,1,1)
+    self.ui.inputDate.setDate(date)
 
 def search(self):
     productName = self.ui.inputProductSearch.text()
     userName = self.ui.inputNameSearch.text()
     option = self.ui.optionsSearch.currentText()
     date = self.ui.inputDate.text()
-    
+    if(date == '2020-01-01'):
+        date = "" 
+   
     if(option == "Imports"):
         df = pd.read_excel('store/data.xlsx', 1)
     if(option == "Exports"):

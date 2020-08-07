@@ -14,6 +14,7 @@ from functions.home import showData
 from functions.imports import addImports,clearInputsImports
 from functions.exports import addExports,clearInputsExports
 from functions.search import search,clearInputs,deleteRow
+from functions.products import addProduct,deleteProduct,updateProduct,resetInputs
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -49,6 +50,11 @@ class MainWindow(QMainWindow):
         self.ui.btnSearch.clicked.connect(lambda:search(self))
         self.ui.btnRessetSearch.clicked.connect(lambda:clearInputs(self))
         self.ui.btnDelSearch.clicked.connect(lambda:deleteRow(self))
+        ## Products Functions
+        self.ui.btnAddProducts.clicked.connect(lambda:addProduct(self))
+        self.ui.btnDelProducts.clicked.connect(lambda:deleteProduct(self))
+        self.ui.btnResetProducts.clicked.connect(lambda:resetInputs(self))
+
         self.show()
 
 
