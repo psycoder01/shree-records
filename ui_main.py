@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledXOoSMk.ui'
+## Form generated from reading UI file 'untitledczgGXY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.0
 ##
@@ -209,6 +209,24 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.Btn_Menu_Products)
 
+        self.Btn_Menu_Analyze = QPushButton(self.frame_menus)
+        self.Btn_Menu_Analyze.setObjectName(u"Btn_Menu_Analyze")
+        self.Btn_Menu_Analyze.setMinimumSize(QSize(0, 50))
+        self.Btn_Menu_Analyze.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(0, 85, 127);\n"
+"	border:0px solid;\n"
+"	outline:0;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(0, 0, 255);\n"
+"}\n"
+"QPushButton:checked{\n"
+"	background-color: rgb(0, 170, 127);\n"
+"}")
+        self.Btn_Menu_Analyze.setCheckable(True)
+
+        self.verticalLayout_3.addWidget(self.Btn_Menu_Analyze)
+
 
         self.verticalLayout_2.addWidget(self.frame_menus, 0, Qt.AlignTop)
 
@@ -263,6 +281,135 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.addWidget(self.frame_pageHome)
 
         self.stack_pages.addWidget(self.page_Home)
+        self.page_Analyze = QWidget()
+        self.page_Analyze.setObjectName(u"page_Analyze")
+        self.verticalLayout_12 = QVBoxLayout(self.page_Analyze)
+        self.verticalLayout_12.setSpacing(0)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.frame_pageAnalyze = QFrame(self.page_Analyze)
+        self.frame_pageAnalyze.setObjectName(u"frame_pageAnalyze")
+        self.frame_pageAnalyze.setFrameShape(QFrame.NoFrame)
+        self.frame_pageAnalyze.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_10 = QVBoxLayout(self.frame_pageAnalyze)
+        self.verticalLayout_10.setSpacing(0)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.labels_Analyze = QFrame(self.frame_pageAnalyze)
+        self.labels_Analyze.setObjectName(u"labels_Analyze")
+        self.labels_Analyze.setMaximumSize(QSize(16777215, 30))
+        self.labels_Analyze.setFrameShape(QFrame.StyledPanel)
+        self.labels_Analyze.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.labels_Analyze)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.label_Analyze = QLabel(self.labels_Analyze)
+        self.label_Analyze.setObjectName(u"label_Analyze")
+        self.label_Analyze.setFont(font1)
+        self.label_Analyze.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_6.addWidget(self.label_Analyze)
+
+        self.btnAnalyze = QPushButton(self.labels_Analyze)
+        self.btnAnalyze.setObjectName(u"btnAnalyze")
+        self.btnAnalyze.setMaximumSize(QSize(100, 16777215))
+
+        self.horizontalLayout_6.addWidget(self.btnAnalyze)
+
+
+        self.verticalLayout_10.addWidget(self.labels_Analyze)
+
+        self.importsSectionAnalyze = QFrame(self.frame_pageAnalyze)
+        self.importsSectionAnalyze.setObjectName(u"importsSectionAnalyze")
+        self.importsSectionAnalyze.setFrameShape(QFrame.StyledPanel)
+        self.importsSectionAnalyze.setFrameShadow(QFrame.Raised)
+        self.gridLayout_6 = QGridLayout(self.importsSectionAnalyze)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.label_Imports = QLabel(self.importsSectionAnalyze)
+        self.label_Imports.setObjectName(u"label_Imports")
+
+        self.gridLayout_6.addWidget(self.label_Imports, 1, 0, 1, 1)
+
+        self.showAnalyticsImports = QPushButton(self.importsSectionAnalyze)
+        self.showAnalyticsImports.setObjectName(u"showAnalyticsImports")
+
+        self.gridLayout_6.addWidget(self.showAnalyticsImports, 1, 1, 1, 1)
+
+
+        self.verticalLayout_10.addWidget(self.importsSectionAnalyze)
+
+        self.exportsSectionAnalyze = QFrame(self.frame_pageAnalyze)
+        self.exportsSectionAnalyze.setObjectName(u"exportsSectionAnalyze")
+        self.exportsSectionAnalyze.setFrameShape(QFrame.StyledPanel)
+        self.exportsSectionAnalyze.setFrameShadow(QFrame.Raised)
+        self.gridLayout_5 = QGridLayout(self.exportsSectionAnalyze)
+        self.gridLayout_5.setSpacing(6)
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.gridLayout_5.setContentsMargins(9, 9, 9, 9)
+        self.label_exports = QLabel(self.exportsSectionAnalyze)
+        self.label_exports.setObjectName(u"label_exports")
+
+        self.gridLayout_5.addWidget(self.label_exports, 0, 0, 1, 1)
+
+        self.showAnalyticsExports = QPushButton(self.exportsSectionAnalyze)
+        self.showAnalyticsExports.setObjectName(u"showAnalyticsExports")
+
+        self.gridLayout_5.addWidget(self.showAnalyticsExports, 0, 1, 1, 1)
+
+
+        self.verticalLayout_10.addWidget(self.exportsSectionAnalyze)
+
+        self.totalSectionAnalyze = QFrame(self.frame_pageAnalyze)
+        self.totalSectionAnalyze.setObjectName(u"totalSectionAnalyze")
+        self.totalSectionAnalyze.setFrameShape(QFrame.StyledPanel)
+        self.totalSectionAnalyze.setFrameShadow(QFrame.Raised)
+        self.gridLayout_7 = QGridLayout(self.totalSectionAnalyze)
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.label_4 = QLabel(self.totalSectionAnalyze)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.label_4, 1, 2, 1, 1)
+
+        self.totalAnalyticsImportsLabel = QLabel(self.totalSectionAnalyze)
+        self.totalAnalyticsImportsLabel.setObjectName(u"totalAnalyticsImportsLabel")
+
+        self.gridLayout_7.addWidget(self.totalAnalyticsImportsLabel, 1, 1, 1, 1)
+
+        self.label_2 = QLabel(self.totalSectionAnalyze)
+        self.label_2.setObjectName(u"label_2")
+
+        self.gridLayout_7.addWidget(self.label_2, 0, 0, 1, 1)
+
+        self.totalAnalyticsExportsLabel = QLabel(self.totalSectionAnalyze)
+        self.totalAnalyticsExportsLabel.setObjectName(u"totalAnalyticsExportsLabel")
+
+        self.gridLayout_7.addWidget(self.totalAnalyticsExportsLabel, 1, 3, 1, 1)
+
+        self.label_3 = QLabel(self.totalSectionAnalyze)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.label_3, 1, 0, 1, 1)
+
+        self.label_5 = QLabel(self.totalSectionAnalyze)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout_7.addWidget(self.label_5, 2, 0, 1, 1)
+
+        self.profitAnalyticsLabel = QLabel(self.totalSectionAnalyze)
+        self.profitAnalyticsLabel.setObjectName(u"profitAnalyticsLabel")
+
+        self.gridLayout_7.addWidget(self.profitAnalyticsLabel, 2, 1, 1, 1)
+
+
+        self.verticalLayout_10.addWidget(self.totalSectionAnalyze)
+
+
+        self.verticalLayout_12.addWidget(self.frame_pageAnalyze)
+
+        self.stack_pages.addWidget(self.page_Analyze)
         self.page_Imports = QWidget()
         self.page_Imports.setObjectName(u"page_Imports")
         self.verticalLayout_8 = QVBoxLayout(self.page_Imports)
@@ -575,12 +722,26 @@ class Ui_MainWindow(object):
         self.Btn_Menu_Exports.setText(QCoreApplication.translate("MainWindow", u"EXPORTS", None))
         self.Btn_Menu_Search.setText(QCoreApplication.translate("MainWindow", u"SEARCH", None))
         self.Btn_Menu_Products.setText(QCoreApplication.translate("MainWindow", u"PRODUCTS", None))
+        self.Btn_Menu_Analyze.setText(QCoreApplication.translate("MainWindow", u"ANALYZE", None))
         ___qtablewidgetitem = self.table_pageHome.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Product", None));
         ___qtablewidgetitem1 = self.table_pageHome.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Rate", None));
         ___qtablewidgetitem2 = self.table_pageHome.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Available", None));
+        self.label_Analyze.setText(QCoreApplication.translate("MainWindow", u"Analysis", None))
+        self.btnAnalyze.setText(QCoreApplication.translate("MainWindow", u"Start", None))
+        self.label_Imports.setText(QCoreApplication.translate("MainWindow", u"Imports", None))
+        self.showAnalyticsImports.setText(QCoreApplication.translate("MainWindow", u"Show", None))
+        self.label_exports.setText(QCoreApplication.translate("MainWindow", u"Exports", None))
+        self.showAnalyticsExports.setText(QCoreApplication.translate("MainWindow", u"Show", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Exports:", None))
+        self.totalAnalyticsImportsLabel.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Total", None))
+        self.totalAnalyticsExportsLabel.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Imports:", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Profit :", None))
+        self.profitAnalyticsLabel.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.labelTotalImports.setText(QCoreApplication.translate("MainWindow", u"Total", None))
         self.btnImports.setText(QCoreApplication.translate("MainWindow", u"Import", None))
         self.labelPnoImports.setText(QCoreApplication.translate("MainWindow", u"Phone No", None))

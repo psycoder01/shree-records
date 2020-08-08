@@ -15,6 +15,7 @@ from functions.imports import addImports,clearInputsImports
 from functions.exports import addExports,clearInputsExports
 from functions.search import search,clearInputs,deleteRow
 from functions.products import addProduct,deleteProduct,updateProduct,resetInputs
+from functions.analyze import doAnalytics,doImportsAnalytics,doExportsAnalytics
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -37,6 +38,8 @@ class MainWindow(QMainWindow):
             lambda: UIFunctions.changeStackPage(self, self.ui.page_Search, 4))
         self.ui.Btn_Menu_Products.clicked.connect(
             lambda: UIFunctions.changeStackPage(self, self.ui.page_Products, 5))
+        self.ui.Btn_Menu_Analyze.clicked.connect(
+            lambda: UIFunctions.changeStackPage(self, self.ui.page_Analyze, 6))
 
         ## Home Function
         showData(self)
@@ -54,6 +57,10 @@ class MainWindow(QMainWindow):
         self.ui.btnAddProducts.clicked.connect(lambda:addProduct(self))
         self.ui.btnDelProducts.clicked.connect(lambda:deleteProduct(self))
         self.ui.btnResetProducts.clicked.connect(lambda:resetInputs(self))
+        ## Analyze Functions
+        self.ui.btnAnalyze.clicked.connect(lambda:doAnalytics(self))
+        self.ui.showAnalyticsImports.clicked.connect(lambda:doImportsAnalytics(self))
+        self.ui.showAnalyticsExports.clicked.connect(lambda:doExportsAnalytics(self))
 
         self.show()
 

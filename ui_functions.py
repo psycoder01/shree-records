@@ -29,6 +29,7 @@ class UIFunctions(MainWindow):
         self.ui.Btn_Menu_Exports.setChecked(False)
         self.ui.Btn_Menu_Search.setChecked(False)
         self.ui.Btn_Menu_Products.setChecked(False)
+        self.ui.Btn_Menu_Analyze.setChecked(False)
 
         if(index == 1):
             self.ui.Btn_Menu_Home.setChecked(True)
@@ -43,5 +44,7 @@ class UIFunctions(MainWindow):
         if(index == 5):
             showDataProducts(self)
             self.ui.Btn_Menu_Products.setChecked(True)
+        if(index == 6):
+            self.ui.Btn_Menu_Analyze.setChecked(True)
 
         self.ui.stack_pages.setCurrentWidget(page)
