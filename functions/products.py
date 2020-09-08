@@ -2,10 +2,12 @@ from openpyxl import load_workbook
 import pandas as pd
 from PySide2.QtWidgets import QTableWidgetItem
 from PySide2.QtGui import QFont
+from functions.home import getStoreFile
 
+fileName = getStoreFile()
 
 def showDataProducts(self):
-    dataFrame = pd.read_excel('store/data.xlsx', 0)
+    dataFrame = pd.read_excel(fileName, 0)
     rowLength = len(dataFrame.index)
     # Setting max row count in table
     self.ui.tableProducts.setRowCount(rowLength)
@@ -27,7 +29,7 @@ def addProduct(self):
     data.append(price)
     data.append(available)
 
-    wb = load_workbook('store/data.xlsx')
+    wb = load_workbook(fileName)
     ws = wb.get_sheet_by_name('products')
     rowLen = len(ws['A'])
     for col in range(1, 5):
@@ -36,7 +38,7 @@ def addProduct(self):
             cell.value = rowLen
             continue
         cell.value = data[col-2]
-    wb.save('store/data.xlsx')
+    wb.save(fileName)
     resetInputs(self)
     showDataProducts(self)
 
@@ -49,11 +51,11 @@ def indexCol(ws, excelIndex, total):
 
 def deleteProduct(self):
     deleteIndex = self.ui.tableProducts.currentRow()
-    wb = load_workbook('store/data.xlsx')
+    wb = load_workbook(fileName)
     ws = wb.get_sheet_by_name('products')
     ws.delete_rows(int(deleteIndex)+2)
     indexCol(ws, deleteIndex, len(ws['A']))
-    wb.save('store/data.xlsx')
+    wb.save(fileName)
     showDataProducts(self)
 
 
@@ -61,12 +63,12 @@ def resetInputs(self):
     self.ui.inputProductProducts.setText("")
     self.ui.inputPriceProducts.setText("")
     self.ui.inputAvlProducts.setText("")
-    updateProduct(self)
+    # updateProduct(self)
 
 
 def updateProduct(self):
     table = self.ui.tableProducts
-    wb = load_workbook('store/data.xlsx')
+    wb = load_workbook(fileName)
     ws = wb.get_sheet_by_name('products')
     rowLen = len(ws['A'])
     for row in range(0, rowLen-1):
@@ -74,5 +76,5 @@ def updateProduct(self):
             value = table.item(row, col).text()
             cell = ws.cell(row+2, col+2)
             cell.value = value
-    wb.save('store/data.xlsx')
+    wb.save(fileName)
     showDataProducts(self)

@@ -10,7 +10,7 @@ from ui_main import Ui_MainWindow
 
 # IMPORT FUNCTIONS
 from ui_functions import *
-from functions.home import showData
+from functions.home import showData,checkFile
 from functions.imports import addImports,clearInputsImports
 from functions.exports import addExports,clearInputsExports
 from functions.search import search,clearInputs,deleteRow
@@ -22,6 +22,8 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        checkFile()
 
         ## TOGGLE/BURGUER MENU
         self.ui.Btn_Toggle.clicked.connect(

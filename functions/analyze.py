@@ -1,10 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from functions.home import getStoreFile
 
+fileName = getStoreFile()
 
 def doAnalytics(self):
-    dfImports = pd.read_excel('store/data.xlsx', 1)
-    dfExports = pd.read_excel('store/data.xlsx', 2)
+    dfImports = pd.read_excel(fileName, 1)
+    dfExports = pd.read_excel(fileName, 2)
     importsTotal = dfImports['Total'].sum(skipna=True)
     exportsTotal = dfExports['Total'].sum(skipna=True)
     result = exportsTotal - importsTotal
@@ -16,7 +18,7 @@ def doAnalytics(self):
     
 
 def doImportsAnalytics(self):
-    dfImports = pd.read_excel('store/data.xlsx', 1)
+    dfImports = pd.read_excel(fileName, 1)
     result = dfImports.groupby('Product')['Total'].sum()
     ax = result.plot(kind='bar')
     for p in ax.patches:
@@ -30,7 +32,7 @@ def doImportsAnalytics(self):
 
 
 def doExportsAnalytics(self):
-    dfExports = pd.read_excel('store/data.xlsx',2)
+    dfExports = pd.read_excel(fileName,2)
     result = dfExports.groupby('Product')['Total'].sum()
     ax = result.plot(kind='bar')
     for p in ax.patches:

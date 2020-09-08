@@ -1,5 +1,8 @@
 from openpyxl import load_workbook
 from datetime import datetime
+from functions.home import getStoreFile
+
+fileLocation = getStoreFile()
 
 def addImports(self):
     name = self.ui.inputNameImports.text()
@@ -14,7 +17,7 @@ def addImports(self):
     data.append(int(pno))
     data.append(datetime.today().strftime('%Y-%m-%d;%H-%M'))
 
-    wb = load_workbook('store/data.xlsx')
+    wb = load_workbook(fileLocation)
     ws = wb.get_sheet_by_name('imports')
     rowLen = len(ws['A'])
     for col in range(1, 7):
@@ -23,7 +26,7 @@ def addImports(self):
             cell.value = rowLen
             continue
         cell.value = data[col-2]
-    wb.save('store/data.xlsx')
+    wb.save(fileLocation)
 
     clearInputsImports(self)
 

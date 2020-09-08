@@ -3,7 +3,9 @@ from openpyxl import load_workbook
 from PySide2.QtWidgets import QTableWidgetItem
 from PySide2.QtCore import QDate
 from PySide2.QtGui import QFont
+from functions.home import getStoreFile
 
+fileName =  getStoreFile()
 
 def setDate(self):
     date = QDate.currentDate()
@@ -25,9 +27,9 @@ def search(self):
         date = "" 
    
     if(option == "Imports"):
-        df = pd.read_excel('store/data.xlsx', 1)
+        df = pd.read_excel(fileName, 1)
     if(option == "Exports"):
-        df = pd.read_excel('store/data.xlsx', 2)
+        df = pd.read_excel(fileName, 2)
     search = df[(df['Product'].str.contains(productName, case=False))
                 & (df['Name'].str.contains(userName, case=False)) & (df['Date'].str.contains(date))]
 
@@ -62,9 +64,9 @@ def deleteRow(self):
     deleteIndex = self.ui.tableResultSearch.currentRow()
     excelIndex = self.ui.tableResultSearch.item(deleteIndex, 0).text()
     option = self.ui.optionsSearch.currentText()
-    wb = load_workbook('store/data.xlsx')
+    wb = load_workbook(fileName)
     ws = wb.get_sheet_by_name(str(option).lower())
     ws.delete_rows(int(excelIndex)+1)
     indexCol(ws, excelIndex, len(ws['A']))
-    wb.save('store/data.xlsx')
+    wb.save(fileName)
     search(self)
