@@ -5,7 +5,8 @@ from PySide2.QtCore import QDate
 from PySide2.QtGui import QFont
 from functions.home import getStoreFile
 
-fileName =  getStoreFile()
+fileName = getStoreFile()
+
 
 def setDate(self):
     date = QDate.currentDate()
@@ -15,23 +16,25 @@ def setDate(self):
 def clearInputs(self):
     self.ui.inputProductSearch.setText("")
     self.ui.inputNameSearch.setText("")
-    date = QDate(2020,1,1)
-    self.ui.inputDate.setDate(date)
+    setDate(self)
+
 
 def search(self):
     productName = self.ui.inputProductSearch.text()
     userName = self.ui.inputNameSearch.text()
     option = self.ui.optionsSearch.currentText()
     date = self.ui.inputDate.text()
-    if(date == '2020-01-01'):
-        date = "" 
-   
-    if(option == "Imports"):
+    filterDate = self.ui.checkDate.isChecked()
+    if (filterDate == False):
+        date = ""
+
+    if (option == "Imports"):
         df = pd.read_excel(fileName, 1)
-    if(option == "Exports"):
+    if (option == "Exports"):
         df = pd.read_excel(fileName, 2)
     search = df[(df['Product'].str.contains(productName, case=False))
-                & (df['Name'].str.contains(userName, case=False)) & (df['Date'].str.contains(date))]
+                & (df['Name'].str.contains(userName, case=False)) &
+                (df['Date'].str.contains(date))]
 
     rowLength = len(search.index)
     self.ui.tableResultSearch.setRowCount(rowLength)
@@ -55,9 +58,9 @@ def search(self):
 
 
 def indexCol(ws, excelIndex, total):
-    for row in range(int(excelIndex)+1, total+1):
+    for row in range(int(excelIndex) + 1, total + 1):
         cell = ws.cell(row, 1)
-        cell.value = row-1
+        cell.value = row - 1
 
 
 def deleteRow(self):
@@ -66,7 +69,7 @@ def deleteRow(self):
     option = self.ui.optionsSearch.currentText()
     wb = load_workbook(fileName)
     ws = wb.get_sheet_by_name(str(option).lower())
-    ws.delete_rows(int(excelIndex)+1)
+    ws.delete_rows(int(excelIndex) + 1)
     indexCol(ws, excelIndex, len(ws['A']))
     wb.save(fileName)
     search(self)

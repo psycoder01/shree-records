@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledczgGXY.ui'
+## Form generated from reading UI file 'untitledfXUvzl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.0
 ##
@@ -548,64 +548,69 @@ class Ui_MainWindow(object):
         self.frame_pageSearch.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frame_pageSearch)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.inputNameSearch = QLineEdit(self.frame_pageSearch)
-        self.inputNameSearch.setObjectName(u"inputNameSearch")
-
-        self.gridLayout_3.addWidget(self.inputNameSearch, 1, 3, 1, 1)
-
-        self.btnSearch = QPushButton(self.frame_pageSearch)
-        self.btnSearch.setObjectName(u"btnSearch")
-
-        self.gridLayout_3.addWidget(self.btnSearch, 3, 3, 1, 1)
-
-        self.optionsSearch = QComboBox(self.frame_pageSearch)
-        self.optionsSearch.addItem("")
-        self.optionsSearch.addItem("")
-        self.optionsSearch.setObjectName(u"optionsSearch")
-
-        self.gridLayout_3.addWidget(self.optionsSearch, 3, 0, 1, 1)
-
         self.inputProductSearch = QLineEdit(self.frame_pageSearch)
         self.inputProductSearch.setObjectName(u"inputProductSearch")
 
-        self.gridLayout_3.addWidget(self.inputProductSearch, 1, 1, 1, 2)
+        self.gridLayout_3.addWidget(self.inputProductSearch, 4, 2, 1, 2)
 
         self.labelDateSearch = QLabel(self.frame_pageSearch)
         self.labelDateSearch.setObjectName(u"labelDateSearch")
 
         self.gridLayout_3.addWidget(self.labelDateSearch, 0, 0, 1, 1)
 
-        self.btnRessetSearch = QPushButton(self.frame_pageSearch)
-        self.btnRessetSearch.setObjectName(u"btnRessetSearch")
-
-        self.gridLayout_3.addWidget(self.btnRessetSearch, 3, 2, 1, 1)
-
-        self.labelNameSearch = QLabel(self.frame_pageSearch)
-        self.labelNameSearch.setObjectName(u"labelNameSearch")
-
-        self.gridLayout_3.addWidget(self.labelNameSearch, 0, 3, 1, 1)
-
-        self.btnDelSearch = QPushButton(self.frame_pageSearch)
-        self.btnDelSearch.setObjectName(u"btnDelSearch")
-
-        self.gridLayout_3.addWidget(self.btnDelSearch, 3, 1, 1, 1)
-
         self.inputDate = QDateEdit(self.frame_pageSearch)
         self.inputDate.setObjectName(u"inputDate")
         self.inputDate.setCurrentSection(QDateTimeEdit.YearSection)
         self.inputDate.setCalendarPopup(True)
 
-        self.gridLayout_3.addWidget(self.inputDate, 1, 0, 1, 1)
-
-        self.labelProductSearch = QLabel(self.frame_pageSearch)
-        self.labelProductSearch.setObjectName(u"labelProductSearch")
-
-        self.gridLayout_3.addWidget(self.labelProductSearch, 0, 1, 1, 2)
+        self.gridLayout_3.addWidget(self.inputDate, 4, 0, 1, 1)
 
         self.tableResultSearch = QTableWidget(self.frame_pageSearch)
         self.tableResultSearch.setObjectName(u"tableResultSearch")
 
-        self.gridLayout_3.addWidget(self.tableResultSearch, 4, 0, 1, 4)
+        self.gridLayout_3.addWidget(self.tableResultSearch, 29, 0, 1, 8)
+
+        self.inputNameSearch = QLineEdit(self.frame_pageSearch)
+        self.inputNameSearch.setObjectName(u"inputNameSearch")
+
+        self.gridLayout_3.addWidget(self.inputNameSearch, 4, 7, 1, 1)
+
+        self.labelProductSearch = QLabel(self.frame_pageSearch)
+        self.labelProductSearch.setObjectName(u"labelProductSearch")
+
+        self.gridLayout_3.addWidget(self.labelProductSearch, 0, 2, 1, 3)
+
+        self.labelNameSearch = QLabel(self.frame_pageSearch)
+        self.labelNameSearch.setObjectName(u"labelNameSearch")
+
+        self.gridLayout_3.addWidget(self.labelNameSearch, 0, 7, 1, 1)
+
+        self.checkDate = QCheckBox(self.frame_pageSearch)
+        self.checkDate.setObjectName(u"checkDate")
+
+        self.gridLayout_3.addWidget(self.checkDate, 5, 0, 1, 1)
+
+        self.optionsSearch = QComboBox(self.frame_pageSearch)
+        self.optionsSearch.addItem("")
+        self.optionsSearch.addItem("")
+        self.optionsSearch.setObjectName(u"optionsSearch")
+
+        self.gridLayout_3.addWidget(self.optionsSearch, 9, 0, 1, 1)
+
+        self.btnDelSearch = QPushButton(self.frame_pageSearch)
+        self.btnDelSearch.setObjectName(u"btnDelSearch")
+
+        self.gridLayout_3.addWidget(self.btnDelSearch, 5, 2, 1, 1)
+
+        self.btnRessetSearch = QPushButton(self.frame_pageSearch)
+        self.btnRessetSearch.setObjectName(u"btnRessetSearch")
+
+        self.gridLayout_3.addWidget(self.btnRessetSearch, 5, 3, 1, 1)
+
+        self.btnSearch = QPushButton(self.frame_pageSearch)
+        self.btnSearch.setObjectName(u"btnSearch")
+
+        self.gridLayout_3.addWidget(self.btnSearch, 5, 7, 1, 1)
 
 
         self.verticalLayout_9.addWidget(self.frame_pageSearch)
@@ -754,16 +759,17 @@ class Ui_MainWindow(object):
         self.labelPnoExports.setText(QCoreApplication.translate("MainWindow", u"Phone No", None))
         self.btnResetExports.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
         self.btnExports.setText(QCoreApplication.translate("MainWindow", u"Export", None))
-        self.btnSearch.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.labelDateSearch.setText(QCoreApplication.translate("MainWindow", u"Date", None))
+        self.inputDate.setDisplayFormat(QCoreApplication.translate("MainWindow", u"yyyy-MM-dd", None))
+        self.labelProductSearch.setText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.labelNameSearch.setText(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.checkDate.setText(QCoreApplication.translate("MainWindow", u"Date", None))
         self.optionsSearch.setItemText(0, QCoreApplication.translate("MainWindow", u"Imports", None))
         self.optionsSearch.setItemText(1, QCoreApplication.translate("MainWindow", u"Exports", None))
 
-        self.labelDateSearch.setText(QCoreApplication.translate("MainWindow", u"Date", None))
-        self.btnRessetSearch.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
-        self.labelNameSearch.setText(QCoreApplication.translate("MainWindow", u"Name", None))
         self.btnDelSearch.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
-        self.inputDate.setDisplayFormat(QCoreApplication.translate("MainWindow", u"yyyy-MM-dd", None))
-        self.labelProductSearch.setText(QCoreApplication.translate("MainWindow", u"Product", None))
+        self.btnRessetSearch.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
+        self.btnSearch.setText(QCoreApplication.translate("MainWindow", u"Search", None))
         self.labelProductProducts.setText(QCoreApplication.translate("MainWindow", u"Product", None))
         self.labelPriceProducts.setText(QCoreApplication.translate("MainWindow", u"Price", None))
         self.labelAvlProducts.setText(QCoreApplication.translate("MainWindow", u"Available", None))
